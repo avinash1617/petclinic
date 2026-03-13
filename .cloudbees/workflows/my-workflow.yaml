@@ -8,13 +8,18 @@ on:
 jobs:
   build:
     steps:
-       - name: Checkout Code
-         kind: git
-         uses: https://github.com/avinash1617/petclinic.git
-         with:
-          ref: main
-          
-       - name: Maven Build
-         kind: build
-         uses: docker://maven:3.9.14-eclipse-temurin-17
-         run: mvn clean install
+      # Step 1: Checkout code
+      - name: Checkout Code
+        kind: build
+        uses: docker://alpine/git:latest
+        run: |
+          git clone https://github.com/avinash1617/petclinic.git
+          cd petclinic
+
+      # Step 2: Maven Build
+      - name: Maven Build
+        kind: build
+        uses: docker://maven:3.9.14-eclipse-temurin-17
+        run: |
+          cd petclinic  # make sure pom.xml is here
+          mvn clean install
