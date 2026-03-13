@@ -11,5 +11,4 @@ jobs:
       - name: Maven Build
         kind: build
         uses: docker://maven:3.9.3-openjdk-17
-        with:
-          args: mvn clean install
+        run: mvn clean install
