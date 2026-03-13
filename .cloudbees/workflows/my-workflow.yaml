@@ -8,8 +8,8 @@ on:
 jobs:
   build:
     steps:
-      - name: Say hello
+      - name: Maven Build
         kind: build
-        uses: docker://golang:1.20.3-alpine3.17
+        uses: docker://maven:3.9.3-openjdk-17
         with:
-          entrypoint: mvn clean install
+          args: mvn clean install
