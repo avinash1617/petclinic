@@ -23,4 +23,5 @@ jobs:
         run: |
           pwd
           ls -ltra
+          cd /cloudbees/workspace/petclinic02
           mvn clean install
