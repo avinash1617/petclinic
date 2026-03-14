@@ -21,5 +21,4 @@ jobs:
         kind: build
         uses: docker://maven:3.9.14-eclipse-temurin-17
         run: |
-          cd petclinic  # make sure pom.xml is here
           mvn clean install
