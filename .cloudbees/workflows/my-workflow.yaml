@@ -19,7 +19,7 @@ jobs:
       # Step 2: Maven Build
       - name: Maven Build
         kind: build
-        uses: docker://maven:3.9.14-eclipse-temurin-17
+        uses: docker://maven:3.9.14-eclipse-temurin-8
         run: |
           pwd
           ls -ltra
