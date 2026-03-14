@@ -13,7 +13,7 @@ jobs:
         kind: build
         uses: docker://alpine/git:latest
         run: |
-          git clone https://github.com/avinash1617/petclinic02.git
+          git clone https://github.com/avinash1617/sample-java-app.git
           ls
 
       # Step 2: Maven Build
