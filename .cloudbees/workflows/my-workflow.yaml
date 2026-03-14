@@ -14,7 +14,8 @@ jobs:
         uses: docker://alpine/git:latest
         run: |
           git clone https://github.com/avinash1617/petclinic02.git
-          cd petclinic02
+          ls
+          cd petclinic
 
       # Step 2: Maven Build
       - name: Maven Build
