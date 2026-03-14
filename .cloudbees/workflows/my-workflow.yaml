@@ -15,7 +15,6 @@ jobs:
         run: |
           git clone https://github.com/avinash1617/petclinic02.git
           ls
-          cd petclinic
 
       # Step 2: Maven Build
       - name: Maven Build
